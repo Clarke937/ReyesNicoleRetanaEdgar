@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/investigations',InvestigationsController::class);
+Route::resource('/status',StatusController::class);
+

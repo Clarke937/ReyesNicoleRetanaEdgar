@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('investigations', function (Blueprint $table) {
-            $table->bigInteger('id');
+            $table->id('id');
             $table->string('title');
+            $table->text('description');
+            //$table->foreign("statuses_id")->references("id")->on("statuses");
+            $table->timestamp('deleted_at');
             $table->timestamps();
         });
     }
