@@ -14,7 +14,8 @@ class InvestigationTagController extends Controller
      */
     public function index()
     {
-        //
+        $investigationstags = Investigation_Tag::all();
+        return view('investigationstags/index',compact("investigationstags"));
     }
 
     /**

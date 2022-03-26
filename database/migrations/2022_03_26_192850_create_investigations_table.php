@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id('id');
             $table->string('title');
             $table->text('description');
-            //$table->foreign("statuses_id")->references("id")->on("statuses");
             $table->timestamp('deleted_at');
             $table->timestamps();
         });

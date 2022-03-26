@@ -14,7 +14,8 @@ class InvestigationsController extends Controller
      */
     public function index()
     {
-        //
+        $investigations = Investigations::all();
+        return view('investigations/index',compact("investigations"));
     }
 
     /**

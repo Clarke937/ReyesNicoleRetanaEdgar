@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('investigation__tags', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('investigations_id')->references('id')->on('investigations');
+            $table->foreignId('tag_id')->references('id')->on('tags');
             $table->timestamps();
         });
     }

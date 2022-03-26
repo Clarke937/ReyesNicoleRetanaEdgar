@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('departamento');
-            $table->string('sitio_web');
-            $table->float('salario');
+            $table->string('departamento')->nullable();
+            $table->string('sitio_web')->nullable();
+            $table->float('salario')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
